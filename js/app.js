@@ -3,7 +3,7 @@ angular.module("movieList").controller("movieCtrl", function ($scope, $http, $ui
         var $ctrl = this;
         API_BASE_URL = 'https://api.themoviedb.org/3/';
         IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/';
-        API_KEY = 'ADD API KEY HERE';
+        API_KEY = 'ADD API KEY'; //TODO
         IMAGE_SIZE = 'w185';
         var image_size = 'w185';
         // Set image size based on screen size
