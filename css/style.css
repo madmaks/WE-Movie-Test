@@ -27,10 +27,12 @@ body {
 }
 
 .image{
-    max-width: 100%;
+    /*max-width: 100%;*/
     margin: 20px;
     display: block;
     cursor: pointer;
+    max-width: 185px;
+    max-height: 278px;
 }
 
 .image:after {
@@ -116,7 +118,6 @@ body {
     float: right;
     font-weight: bold;
     font-size: large;
-
 }
 
 .card-top{
