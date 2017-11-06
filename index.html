@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-animate.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-touch/1.6.6/angular-touch.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.6.6/angular-sanitize.js"></script>
+
+
+<script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+        integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+      integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+      crossorigin="anonymous">
+
+<script src="js/app.js"></script>
+<link rel="stylesheet" href="css/style.css">
+<body>
+
+<div ng-app="movieList" ng-controller="movieCtrl">
+
+    <div id="movieDetails" class="overlay">
+        <!-- Button to close the overlay navigation -->
+        <a href="javascript:void(0)" class="closebtn" ng-click="closeMovie()">&times;</a>
+        <!-- Overlay content -->
+        <div class="card" style="width:350px">
+            <img class="card-img-top" ng-src="{{ movieImage }}">
+            <div class="card-body">
+                <div class="card-top">
+                    <div class="card-date">{{movieReleaseDate}}</div>
+                    <div class="card-rating">{{movieRating}}</div>
+                </div>
+                <h3 class="card-title">{{movieTitle}}</h3>
+                <p class="card-text">{{movieDesc}}</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="jumbotron text-center">
+        <h2>WE Movie Project</h2>
+        <p>by Max Modylevsky</p>
+    </div>
+
+
+    <div class="container">
+        <div ng-repeat="movie in movies">
+            <div class="item">
+                <img class="image" ng-src="https://image.tmdb.org/t/p/w185{{ movie.poster_path }}"
+                     ng-click="setSelectedMovie(movie)" $ctrl.open()/>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
