@@ -23,6 +23,7 @@
 
 <script src="js/app.js"></script>
 <link rel="stylesheet" href="css/style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <body>
 
 <div ng-app="movieList" ng-controller="movieCtrl">
@@ -31,7 +32,7 @@
         <!-- Button to close the overlay navigation -->
         <a href="javascript:void(0)" class="closebtn" ng-click="closeMovie()">&times;</a>
         <!-- Overlay content -->
-        <div class="card" style="width:350px">
+        <div class="card" >
             <img class="card-img-top" ng-src="{{ movieImage }}">
             <div class="card-body">
                 <div class="card-top">

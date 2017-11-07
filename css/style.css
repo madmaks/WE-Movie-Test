@@ -22,7 +22,7 @@ body {
     .item:last-child{display: block;}
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 359px) {
     .item { width: 100%; }
 }
 
@@ -87,13 +87,37 @@ body {
     font-size: 60px;
 }
 
+.card {
+    width: 350px;
+}
+
 /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
 @media screen and (max-height: 450px) {
     .overlay a {font-size: 20px}
     .overlay .closebtn {
         font-size: 40px;
-        top: 15px;
-        right: 35px;
+    }
+}
+
+@media screen and (max-width: 479px) {
+
+    .image{
+        margin: 0;
+    }
+
+    .card {
+        width: 260px;
+    }
+
+    .overlay .closebtn {
+        font-size: 30px;
+        top: 5px;
+        right: 5px;
+    }
+
+    .container{
+        margin: 0;
+        padding: 0;
     }
 }
 
